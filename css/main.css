@@ -220,13 +220,13 @@ a:hover {
     transition: all 0.3s ease;
     display: block;
     height: 100vh;
+    overflow-y: scroll;
   }
   .navbar-collapse .navbar-nav .active {
     border-bottom: none;
   }
   .navbar-collapse .search-box {
     margin-top: 50px;
-    margin-bottom: -50px;
   }
 
   .navbar-collapse.collapsing {

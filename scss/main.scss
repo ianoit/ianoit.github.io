@@ -267,6 +267,7 @@ a {
         transition: all 0.3s ease;
         display: block;
         height: 100vh;
+        overflow-y: scroll;
 
         .navbar-nav {
             .active {
@@ -276,7 +277,6 @@ a {
 
         .search-box {
             margin-top: 50px;
-            margin-bottom: -50px;
         }
     }
     .navbar-collapse.collapsing {

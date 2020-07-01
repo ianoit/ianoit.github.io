@@ -20,3 +20,14 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+$('#search-input').focus( function() {
+
+    var $input = $(this);
+    //$input.css('background', 'yellow');
+    
+    var scroll = $input.offset();
+    //$input.closest('#viewport').animate({
+    //  scrollTop: $input.offset().top
+    //}, 'slow');
+});
