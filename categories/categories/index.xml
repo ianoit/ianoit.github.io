@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on ianoit</title>
+    <link>https://ianoit.github.io/categories/categories/</link>
+    <description>Recent content in Categories on ianoit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 01 Jul 2020 12:54:35 +0700</lastBuildDate>
+    
+	<atom:link href="https://ianoit.github.io/categories/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Hugo</title>
+      <link>https://ianoit.github.io/2020/07/01/hello-hugo/</link>
+      <pubDate>Wed, 01 Jul 2020 12:54:35 +0700</pubDate>
+      
+      <guid>https://ianoit.github.io/2020/07/01/hello-hugo/</guid>
+      <description>Labore duis aliqua anim ipsum. Exercitation ad amet enim cillum aliqua et. Cillum id eiusmod deserunt laborum laboris. Aliquip sit proident culpa qui eiusmod occaecat in fugiat fugiat ut laborum anim magna. Nostrud incididunt sint dolore sunt dolore. Aute amet velit esse reprehenderit irure sunt elit aute tempor sunt occaecat minim. Ea dolor fugiat enim ex reprehenderit dolor Lorem.
+Mollit est laboris magna sit ipsum eiusmod laborum. Lorem veniam irure et pariatur minim et do minim aliquip laborum ex anim et.</description>
+    </item>
+    
+  </channel>
+</rss>
