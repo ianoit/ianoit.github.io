@@ -74,55 +74,57 @@ function renderSearchResults(searchInput, results){
         searchResults.innerHTML = article;
 
         // show pagination
-        var pagination = "";
-        pagination += `<li class="page-item">
-                            <a class="page-link" href="?q=` + url.searchParams.get("q") + `" aria-label="First"><span aria-hidden="true">Pertama</span></a>
-                        </li>`;
-        pagination += `<li class="page-item`
-                        if(page == 1) {
-                            pagination += ` disabled`
-                        }
-        pagination += `">
-                        <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + (page - 1) + `" aria-label="Sebelumnya"><span aria-hidden="true">Sebelumnya</span></a>
-                    </li>`;
-        
-        var ends_count = 2;  //how many items at the ends (before and after [...])
-        var middle_count = 1;  //how many items before and after current page
-        var dots = false;
-
-        for(var i = 1; i <= pages; i++) {
-            
-            if (i <= ends_count || (page && i >= page - middle_count && i <= page + middle_count) || i > pages - ends_count) {
-                pagination += `<li class="page-item`;
-                if(page == i) {
-                    pagination += ` active`;
-                }
-                pagination += `">
-                                <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + i + `">` + i + `</a>
+        if(results.length > limit) {
+            var pagination = "";
+            pagination += `<li class="page-item">
+                                <a class="page-link" href="?q=` + url.searchParams.get("q") + `" aria-label="First"><span aria-hidden="true">Pertama</span></a>
                             </li>`;
+            pagination += `<li class="page-item`
+                            if(page == 1) {
+                                pagination += ` disabled`
+                            }
+            pagination += `">
+                            <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + (page - 1) + `" aria-label="Sebelumnya"><span aria-hidden="true">Sebelumnya</span></a>
+                        </li>`;
+            
+            var ends_count = 2;  //how many items at the ends (before and after [...])
+            var middle_count = 1;  //how many items before and after current page
+            var dots = false;
 
-                dots = true;
-            } else if (dots) {
-                pagination += `<li class="page-item disabled">
-                                    <a class="page-link"><span>&hellip;</span></a>
+            for(var i = 1; i <= pages; i++) {
+                
+                if (i <= ends_count || (page && i >= page - middle_count && i <= page + middle_count) || i > pages - ends_count) {
+                    pagination += `<li class="page-item`;
+                    if(page == i) {
+                        pagination += ` active`;
+                    }
+                    pagination += `">
+                                    <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + i + `">` + i + `</a>
                                 </li>`;
 
-                dots = false;
+                    dots = true;
+                } else if (dots) {
+                    pagination += `<li class="page-item disabled">
+                                        <a class="page-link"><span>&hellip;</span></a>
+                                    </li>`;
+
+                    dots = false;
+                }
+
             }
 
+            pagination += `<li class="page-item`
+                            if(page == pages) {
+                                pagination += ` disabled`
+                            }
+            pagination += `">
+                                <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + (page + 1) + `" aria-label="Selanjutnya"><span aria-hidden="true">Selanjutnya</span></a>
+                            </li>`;
+            pagination += `<li class="page-item">
+                                <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + pages + `" aria-label="Akhir"><span aria-hidden="true">Akhir</span></a>
+                            </li>`;
+            document.getElementById("pagination").innerHTML = pagination;
         }
-
-        pagination += `<li class="page-item`
-                        if(page == pages) {
-                            pagination += ` disabled`
-                        }
-        pagination += `">
-                            <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + (page + 1) + `" aria-label="Selanjutnya"><span aria-hidden="true">Selanjutnya</span></a>
-                        </li>`;
-        pagination += `<li class="page-item">
-                            <a class="page-link" href="?q=` + url.searchParams.get("q") + `&page=` + pages + `" aria-label="Akhir"><span aria-hidden="true">Akhir</span></a>
-                        </li>`;
-        document.getElementById("pagination").innerHTML = pagination;
 
     // if results are empty
     } else {
