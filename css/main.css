@@ -7,11 +7,6 @@ body {
   background: #fff;
 }
 
-body.keyboard {
-  height: calc(100% + 500px);
-  /* add padding for keyboard */
-}
-
 a {
   color: rgba(0, 0, 0, 0.8);
   transition: all 0.2s;
@@ -231,6 +226,7 @@ a:hover {
   }
   .navbar-collapse .search-box {
     margin-top: 50px;
+    margin-bottom: -50px;
   }
 
   .navbar-collapse.collapsing {
