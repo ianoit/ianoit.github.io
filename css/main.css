@@ -212,7 +212,7 @@ a:hover {
 @media (max-width: 992px) {
   .navbar-collapse {
     background: #fff !important;
-    position: absolute;
+    position: inherit;
     top: 50px;
     left: 100%;
     padding: 50px 15px 15px 15px;
