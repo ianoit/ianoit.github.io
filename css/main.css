@@ -7,6 +7,11 @@ body {
   background: #fff;
 }
 
+body.keyboard {
+  height: calc(100% + 500px);
+  /* add padding for keyboard */
+}
+
 a {
   color: rgba(0, 0, 0, 0.8);
   transition: all 0.2s;
@@ -402,6 +407,9 @@ a:hover {
 .footer {
   padding: 60px 30px;
   text-align: center;
+}
+.footer a {
+  color: #03b988;
 }
 
 /* ============== 404 Notfound ============== */

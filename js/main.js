@@ -20,3 +20,17 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+// focus events don't bubble, must use capture phase
+document.body.addEventListener("focus", event => {
+    const target = event.target;
+    switch (target.tagName) {
+        case "INPUT":
+        case "TEXTAREA":
+        case "SELECT":
+            document.body.classList.add("keyboard");
+    }
+}, true); 
+document.body.addEventListener("blur", () => {
+    document.body.classList.remove("keyboard");
+}, true); 
