@@ -1,112 +1,148 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.72.0" />
-    <title>ianoit</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta itemprop="name" content="ianoit">
-<meta itemprop="description" content="">
-
-<meta property="og:title" content="ianoit" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ianoit.github.io/" />
-<meta property="og:updated_time" content="2020-07-01T12:54:35+07:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ianoit"/>
-<meta name="twitter:description" content=""/>
-
-
-
-
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-80517197-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Profile - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="home">
-
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <canvas id="loadingMatrix" class="loading-matrix"></canvas>
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="matrix-text">INITIALIZING...</div>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-percentage">0%</div>
+            </div>
+        </div>
+    </div>
     
-<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
-
-<nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="https://ianoit.github.io/"><h1>&lt; ianoit &#47;&gt;</h1></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav ml-auto">
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixRain" class="matrix-rain"></canvas>
+    
+    <!-- Main Tech Card -->
+    <div class="tech-card">
+        <!-- Profile Content -->
+        <div class="flex flex-col items-center">
+            <!-- Profile Image -->
+            <div class="relative mb-6">
+                <img src="img/profile.png" 
+                     alt="Profile Picture" 
+                     class="profile-img w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover">
+                <div class="absolute -bottom-2 -right-2 bg-cyan-500 rounded-full p-2">
+                    <i class="fas fa-code text-white text-sm"></i>
+                </div>
+            </div>
             
+            <!-- Name and Title -->
+            <h1 class="text-2xl sm:text-3xl font-bold text-white mb-2">Yulian Safarudin</h1>
+            <h2 class="text-lg sm:text-xl text-cyan-400 mb-4">Full Stack Developer</h2>
             
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link" href="/blog">Blog</a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link" href="/projects">Projects</a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            
-        </ul>
-        
-    </div>
-</nav>
-    <div class="overlay">
-    </div>
-    <div class="wrap-banner">
-        <div class="main-title">
-            <center>
-                <img class="img-rounded" src="/img/ianoit.webp" alt="">
-                <h1>Hello I'm ianoit</h1>
-                <p class="subtitle">
-                    do you like coffee ?
+            <!-- Bio -->
+            <div class="text-center max-w-2xl mx-auto mb-6">
+                <p class="text-gray-300 text-sm sm:text-base">
+                    Passionate about building innovative web applications with cutting-edge technologies. 
+                    Specializing in React, Node.js, and cloud architecture.
                 </p>
-                
-            </center>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span class="px-2 py-1 bg-slate-800 rounded-full text-xs sm:text-sm text-cyan-400">PHP</span>
+                <span class="px-2 py-1 bg-slate-800 rounded-full text-xs sm:text-sm text-cyan-400">CodeIgniter</span>
+                <span class="px-2 py-1 bg-slate-800 rounded-full text-xs sm:text-sm text-cyan-400">Laravel</span>
+                <span class="px-2 py-1 bg-slate-800 rounded-full text-xs sm:text-sm text-cyan-400">MySQL</span>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="flex space-x-3 mb-8">
+                <a href="https://ianoit.github.io/" class="px-4 py-1 sm:px-6 sm:py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition duration-300 text-sm sm:text-base">
+                    Blog
+                </a>
+                <button id="viewProjectsBtn" class="px-4 py-1 sm:px-6 sm:py-2 border border-cyan-400 hover:bg-cyan-900/30 text-cyan-400 rounded-md transition duration-300 text-sm sm:text-base">
+                    View Projects
+                </button>
+            </div>
+            
+            <!-- Social Icons at the bottom -->
+            <div class="flex space-x-6 border-t border-slate-700 pt-6 w-full justify-center">
+                <a href="#" class="social-icon text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Projects Modal -->
+    <div id="projectsModal" class="projects-modal">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-cyan-400">My Projects</h2>
+                <div id="closeProjectsModal" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects will be loaded dynamically from projects.json -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Detail Modal -->
+    <div id="projectDetailModal" class="project-detail-modal">
+        <div class="max-w-4xl mx-auto">
+            <div id="closeProjectDetail" class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <!-- Project content will be dynamically inserted here -->
+            <div id="projectDetailContent"></div>
         </div>
     </div>
 
-    <div class="social">
-        <a href="https://www.instagram.com/yuliansafarudin" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.twitter.com/yuliansfrdn" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.github.com/ianoit" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/yulian-safarudin-287aa1148/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <!-- Lightbox for image viewing -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <div id="lightboxClose" class="lightbox-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="lightbox-nav">
+                <div id="lightboxPrev" class="lightbox-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div id="lightboxNext" class="lightbox-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <img id="lightboxImg" class="lightbox-img" src="" alt="">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
     </div>
-    
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-<script src="/js/lunr.js"></script>
-<script type="text/javascript" src="/js/search.js"></script>
 
+    <!-- Image Modal Popup for Project Images -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-content">
+            <div id="imageModalClose" class="image-modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <img id="imageModalImg" class="image-modal-img" src="" alt="">
+            <div id="imageModalCaption" class="image-modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
-
 </html>

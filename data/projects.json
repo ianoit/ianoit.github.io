@@ -1,0 +1,26 @@
+{
+  "1": {
+    "title": "Lorem Ipsum",
+    "category": "Web Application",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    "longDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "technologies": ["React", "Node.js", "MongoDB", "Redux", "Stripe API"],
+    "images": [
+      {
+        "src": "https://community.softr.io/uploads/db9110/original/2X/7/74e6e7e382d0ff5d7773ca9a87e6f6f8817a68a6.jpeg",
+        "alt": "Image 1",
+        "caption": "Description Image 1"
+      }
+    ],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4",
+      "Feature 5",
+      "Feature 6"
+    ]
+  }
+} 
